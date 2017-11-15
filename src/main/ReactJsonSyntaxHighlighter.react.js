@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import './ReactJsonSyntaxHighlighter.styl'
 
 // see http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
-const ReactJsonSyntaxHighlighter = ({obj}) => {
+const ReactJsonSyntaxHighlighter = ({ obj }) => {
   if (Object.keys(obj).length === 0) {
     return null
   }
@@ -29,7 +30,7 @@ const ReactJsonSyntaxHighlighter = ({obj}) => {
 
   return (
     <div className="ReactJsonSyntaxHighlighter">
-      <pre dangerouslySetInnerHTML={{__html: json}} />
+      <pre dangerouslySetInnerHTML={{ __html: json }} />
     </div>
   )
 }
